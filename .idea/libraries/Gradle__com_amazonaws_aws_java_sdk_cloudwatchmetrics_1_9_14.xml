@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-cloudwatchmetrics:1.9.14">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatchmetrics/1.9.14/856c2a9f3d1dde4554744c71e68e0beab9ef7e6c/aws-java-sdk-cloudwatchmetrics-1.9.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatchmetrics/1.9.14/3fc16244fb18c53cb56499a783e0d4ac4e20e6fe/aws-java-sdk-cloudwatchmetrics-1.9.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

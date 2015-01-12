@@ -1,0 +1,53 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot' 
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+war {
+    baseName = 'next-text'
+    version = '0.0.1-SNAPSHOT'
+}
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: "${springBootVersion}"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    // Spring
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-remote-shell'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    
+    providedRuntime group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat'
+    
+    // Amazon SDK
+    compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.9.+'
+
+    // Google Guava
+    compile group: 'com.google.guava', name: 'guava', version: '18.+'
+    
+    // Test
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}
